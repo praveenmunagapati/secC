@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdio.h>
 
 int main(void) {
@@ -87,28 +88,54 @@ int main(void) {
     //inc dec
     //++ --
     // pre inc
-    int x = 10;
-    int preinc = ++x;
-    // x = x + 1 - > int preinc = x;
-    printf("%d\n",x);
-    printf("%d\n",preinc);
-    //pre dec
-    int y = 10;
-    int predec = --y;
-    // y = y - 1 - > int predec = y ;
-    printf("%d\n",x);
-    printf("%d\n",predec);
-    int z = 10;
-    int postinc = z++;
-    // int postinc = z; -> z = z + 1
-    printf("%d\n",z);
-    printf("%d\n",postinc);
+    // int x = 10;
+    // int preinc = ++x;
+    // // x = x + 1 - > int preinc = x;
+    // printf("%d\n",x);
+    // printf("%d\n",preinc);
     // //pre dec
     // int y = 10;
     // int predec = --y;
     // // y = y - 1 - > int predec = y ;
     // printf("%d\n",x);
     // printf("%d\n",predec);
+    // int z = 10;
+    // int postinc = z++;
+    // // int postinc = z; -> z = z + 1
+    // printf("%d\n",z);
+    // printf("%d\n",postinc);
+    // //pre dec
+    // int h = 10;
+    // int postdec = h--;
+    // //  int postdec = h ; - > h = h - 1
+    // printf("%d\n",h);
+    // printf("%d\n",postdec);
+    // printf("%d\n",++y + ++x - z-- - x++);
+    // // =
+    // int g = 15+1;
+    // int shortp = 10;
+    // shortp += 5;
+    // // shortp = shortp + 5;
+    // printf("%d\n",shortp);
+
+    //relational
+    // > < >= <= == !=
+    int a;
+    a = 5;
+    int b;
+    b = 6;
+    int c;
+    c = 15;
+    printf("%d\n",a>b);
+    printf("%d\n",c>a);
+    printf("%d\n",a<b);
+    printf("%d\n",c<a);
+    printf("%d\n",c>=a);
+    printf("%d\n",c<=a);
+    printf("%d\n",c==a);
+    printf("%d\n",c!=a);
+
+    
 
     return 0;
 }
