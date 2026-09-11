@@ -4,16 +4,16 @@
 int main(void) {
     setbuf(stdout,0);
     //if else switch case default break
-    int a = 100 ,b = 150,c = 160;
+    int a = 1000 ,b = 150,c = 160;
 
-
-    if ((a>b)&&(a>c) ){
+    if (a>b) {
         printf("a is big");
-    } else if ((b>a)&&(b>c)) {
-        printf("c is big");
-    }else if (c>a&&c>b) {
-        printf("c is big");
     }
-
+    if (b>a) {
+        printf("b is big");
+    }
+    // ?:
+    // condtion ? true : false
+    printf(a>b?"a is big":"b is big");
     return 0;
 }
