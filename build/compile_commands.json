@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/sir/CLionProjectsecs/secC/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -g -std=gnu11 -o CMakeFiles\\secC.dir\\main.c.obj -c C:\\Users\\sir\\CLionProjectsecs\\secC\\main.c",
+  "file": "C:/Users/sir/CLionProjectsecs/secC/main.c",
+  "output": "C:/Users/sir/CLionProjectsecs/secC/build/CMakeFiles/secC.dir/main.c.obj"
+}
+]

@@ -1,0 +1,3 @@
+C:/Users/sir/CLionProjectsecs/secC/build/CMakeFiles/secC.dir
+C:/Users/sir/CLionProjectsecs/secC/build/CMakeFiles/edit_cache.dir
+C:/Users/sir/CLionProjectsecs/secC/build/CMakeFiles/rebuild_cache.dir
