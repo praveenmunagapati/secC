@@ -4,16 +4,29 @@
 int main(void) {
     setbuf(stdout,0);
     //if else switch case default break
-    int a = 1000 ,b = 150,c = 160;
+    int i = 10;
+    if (i==1) {
+        printf("one");
+    }else if (i == 2) {
+                printf("two");
+            }else if (i==3) {
+                        printf("three");
+                    }else if (i==4) {
+                                printf("four");
+                            }else if (i == 5) {
+                                        printf("five");
+                                    }else {
+                                        printf("no suitable value detected");
+                                    }
 
-    if (a>b) {
-        printf("a is big");
+    switch (i) {
+        case 1 : printf("one");break;
+        case 2 : printf("two");break;
+        case 3 : printf("three");break;
+        case 4 : printf("four");break;
+        case 5 : printf("five");break;
+        default:printf("no suitable value detected");break;
     }
-    if (b>a) {
-        printf("b is big");
-    }
-    // ?:
-    // condtion ? true : false
-    printf(a>b?"a is big":"b is big");
+
     return 0;
 }
