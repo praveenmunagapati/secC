@@ -3,16 +3,14 @@
 
 int main(void) {
     setbuf(stdout,0);
-    //scope and life time
-    int a = 20;
-    {
-        int a = 10;
-        printf("%d",a);
-        {
-            printf("%d",a);
-        }
-    }
-    printf("%d",a);
+    //// a + - / * %
+    // inc dec ++ --
+    // = ,
+    // += -= *= /= a+=1 = a =a +1
+    // relational > < >= <= != ==
+    //logical && || !
+    //bitwise & | ^ ~ <<  >>
 
+    
     return 0;
 }
