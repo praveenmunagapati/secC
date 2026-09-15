@@ -136,6 +136,15 @@ int main(void) {
     }
 
     //goto
+    //syntax label 2
+    //goto lable
+    printf("do not use\n");
+    japam:
+      printf("sindhuja\n");
+    goto exit;
+    goto japam;
+    exit:
+        printf("japam ends\n");
 
     return 0;
 }
