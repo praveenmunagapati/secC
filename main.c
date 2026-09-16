@@ -44,9 +44,9 @@ int main(void) {
 
     //a) Write a program for finding the max and min from the three numbers.
     int num1,num2,num3;
-    num1 = 50;
-    num2 = 6;
-    num3 = 7;
+    num1 = 15;
+    num2 = -15;
+    num3 = 15;
    //  printf("num1 address %p\n",&num1);
    //  printf("num2 address%p\n",&num2);
    //  printf("num3 address%p\n",&num3);
@@ -63,24 +63,23 @@ int main(void) {
     //         max = num1;
     //     }
     // }
-    if (num1>num2&&num1>num3) {
+    if (num1>=num2&&num1>=num3) {
         max = num1;
     }
-    if (num2>num1&&num2>num3) {
+    if (num2>=num1&&num2>=num3) {
         max = num2;
     }
-    if (num3>num1&&num3>num2) {
+    if (num3>=num1&&num3>=num2) {
         max = num3;
     }
-
     printf("max of %d,%d,%d is %d\n",num1,num2,num3,max);
-    if (num1<num2&&num1<num3) {
+    if (num1<=num2&&num1<=num3) {
         min = num1;
     }
-    if (num2<num1&&num2<num3) {
+    if (num2<=num1&&num2<=num3) {
         min = num2;
     }
-    if (num3<num1&&num3<num2) {
+    if (num3<=num1&&num3<=num2) {
         min = num3;
     }
     printf("min of %d,%d,%d is %d\n",num1,num2,num3,min);
