@@ -2,13 +2,24 @@
 
 int main(void) {
     setbuf(stdout, 0);
-   // d) Write a program
-   // that shows the binary equivalent of a given
-   // positive number between 0 to 255.
-    unsigned int num;
-    num = 2;
-    for (unsigned int i = 128;i>0;i >>= 1) {
-        printf("%u",(num&i)>=1?1:0);
+/*
+    *a) Write a C program, which takes two integer operands
+    *and one operator from the user, performs
+    the operation and then prints the result.
+    (Consider the operators +,-,*, /, % and use Switch
+    Statement). */
+    int a ,b;
+    char ops;
+    a = 15;
+    b = 45;
+    ops = '?';
+    switch (ops) {
+        case '+': printf("%d + %d = %d",a,b,a+b);break;
+        case '-': printf("%d - %d = %d",a,b,a-b);break;
+        case '*': printf("%d * %d = %d",a,b,a*b);break;
+        case '/': printf("%d // %d = %f",a,b,(float)a/b);break;
+        case '%': printf("%d mod %d = %d",a,b,a%b);break;
+            default:printf("no ops");break;
     }
     return 0;
 }
