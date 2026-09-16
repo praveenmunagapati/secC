@@ -2,24 +2,25 @@
 
 int main(void) {
     setbuf(stdout, 0);
-/*
-    *a) Write a C program, which takes two integer operands
-    *and one operator from the user, performs
-    the operation and then prints the result.
-    (Consider the operators +,-,*, /, % and use Switch
-    Statement). */
-    int a ,b;
-    char ops;
-    a = 15;
-    b = 45;
-    ops = '?';
-    switch (ops) {
-        case '+': printf("%d + %d = %d",a,b,a+b);break;
-        case '-': printf("%d - %d = %d",a,b,a-b);break;
-        case '*': printf("%d * %d = %d",a,b,a*b);break;
-        case '/': printf("%d // %d = %f",a,b,(float)a/b);break;
-        case '%': printf("%d mod %d = %d",a,b,a%b);break;
-            default:printf("no ops");break;
+   // b) Write a program that finds if a given number is a prime number.
+    int num = 1;
+    if (num<=0) {
+        printf("not qualified of prime");
+    }else {
+        int count = 0;
+        for (int i = 1 ; i<=num ; i++) {
+            // printf("%d mod %d = %d\n",num,i,num%i);
+            if (num%i==0) {
+                count++;
+            }
+        }
+        // printf("%d",count);
+        if (count<=2) {
+            printf("%d is prime",num);
+        }else {
+            printf("%d is not prime",num);
+        }
     }
+
     return 0;
 }
