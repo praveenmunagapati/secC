@@ -23,5 +23,12 @@ int main(void) {
     //continue
     //goto
     //return
+    //arthematics + - / * %
+    //inc dec   ++ --
+    //relational > < <= >= == !=
+    //logical && || ! \
+    //bitwise  & |  ^ ~ << >>
+    //assigment = += -= *= &=
+    //camma ,
     return 0;
 }
