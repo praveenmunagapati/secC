@@ -8,7 +8,7 @@ unsigned int sids(unsigned int num) {
     return total;
 }
 int main(void) {
-    setbuf(stdout, 0);
+  setbuf(stdout, 0);
     // c) Write a C program to find the sum of individual digits of a positive integer and
     // test given number is palindrome
     //123 = 6
