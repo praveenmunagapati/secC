@@ -1,56 +1,50 @@
 #include <stdio.h>
-//functions
-//syntax
-/*  return type functionname(parameters [only declaration ] ); signature
- *  {
- *
- *      statements
- *      return return type;
+unsigned int sids(unsigned int num) {
+    unsigned int total = 0;
+    while (num!=0) {
+        num = num/10;
+        total = total + num%10;
     }
-    */
-//b) Write the program for the simple, compound interest.
-
-//4tytpes
-void wopwor(void) {
-    printf("no para no return\n");
-    return;
+    return total;
 }
-void wpwor(int x) {
-    printf("%d\n",x);
-    return;
-}
-
-int wopwr(void) {
-    return 127;
-}
-int wpwr(int a , int b) {
-    return a+b;
-}
-//simple interrest
-// si = ptr/100
-
-float simpleinterest(int principle,int time,float rate);
 int main(void) {
     setbuf(stdout, 0);
-    wopwor();
-    wpwor(1500);
-    int i = wopwr();
-    printf("%d\n",i);
-    int sum  = wpwr(5,6);
-    printf("%d\n",sum);
-    int principle = 100000;
-    int time = 12;
-    float rate = 2.5;
-    float si = simpleinterest(principle,time,rate);
-    printf("%f\n",si);
-    return 0;
-}
-float simpleinterest(int principle,int time,float rate) {
-    // int principle = 100000;
-    // int time = 12;
-    // float rate = 2.5;
-    //
-    float si = (principle * time * rate )/100;
-    return si;
-    // printf("%f\n",si);
+    // c) Write a C program to find the sum of individual digits of a positive integer and
+    // test given number is palindrome
+    //123 = 6
+    //784 = 19
+    unsigned int num = 1234564;
+    unsigned int total = 0;
+    // printf("%d\n",num%10);
+    // num = num/10;
+    // printf("%d\n",num%10);
+    // num = num/10;
+    // printf("%d\n",num%10);
+    // total = num%10;
+    // num = num/10;
+    // total = total + num%10;
+    // num = num/10;
+    // total = total + num%10;
+    // num = num/10;
+    // total = total + num%10;
+    // printf("%d\n",total);
+
+    // while (num!=0) {
+    //     num = num/10;
+    //     total = total + num%10;
+    // }
+    total = sids(646846460);
+    printf("%u\n",total);
+    total = sids(42424);
+    printf("%u\n",total);
+    total = sids(7878);
+    printf("%u\n",total);
+    total = sids(1454);
+    printf("%u\n",total);
+    total = sids(2121);
+    printf("%u\n",total);
+    total = sids(4545);
+    printf("%u\n",total);
+    total = sids(7878);
+    printf("%u\n",total);
 }
