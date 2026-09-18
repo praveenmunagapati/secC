@@ -1,28 +1,24 @@
 #include <stdio.h>
-//call by value
-void print(int h) {
-  printf("in print h %p\n",&h);
-  printf("%d\n",h);
-  h = 154;
-  return;
-}
-//call by reference
-void printr(int *ph) {
-  printf("in print ph address %p\n",ph);
-  printf("%d\n",*ph);
-  *ph = 89;
-  return;
+unsigned int ispalin(unsigned int num) {
+  unsigned int total = 0;
+  while (num!=0) {
+    total = total + num%10;
+    num = num/10;
+  }
+  return total;
 }
 int main(void) {
   setbuf(stdout, 0);
-  int h = 15;
-  printf("in main h %p\n",&h);
-  // print(h);
-  // h = 20;
-  // printf("in main h  addresss %p\n",&h);
-  //
-  // printf("in main h %d\n",h);
-  printr(&h);
-  printf("in main h value after printr %d\n",h);
+  // test given number is palindrome.
+  // 1221 reverse 1221 is palindrome
+  //151 reverse 151 is palindrom
+    int num = 156;
+    int rnum = 1;
+  while (num!=0) {
+    rnum = rnum * num%10;
+    num = num/10;
+  }
+  printf("%d\n",rnum);
+
   return 0;
 }
