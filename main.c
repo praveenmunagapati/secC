@@ -12,12 +12,12 @@ int main(void) {
   // test given number is palindrome.
   // 1221 reverse 1221 is palindrome
   //151 reverse 151 is palindrom
-    int num = 156;
-    int rnum = 1;
-  while (num!=0) {
-    rnum = rnum * num%10;
-    num = num/10;
-  }
+    int num = 78465;
+    int rnum = 0;
+    while (num!=0) {
+      rnum = rnum*10 + num%10;
+      num = num/10;
+    }
   printf("%d\n",rnum);
 
   return 0;

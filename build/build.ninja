@@ -57,6 +57,14 @@ build CMakeFiles/secC.dir/main.c.obj: C_COMPILER__secC_unscanned_Debug C$:/Users
   OBJECT_FILE_DIR = CMakeFiles\secC.dir
   TARGET_SUPPORT_DIR = CMakeFiles\secC.dir
 
+build CMakeFiles/secC.dir/lib/mylib.c.obj: C_COMPILER__secC_unscanned_Debug C$:/Users/sir/CLionProjectsecs/secC/lib/mylib.c || cmake_object_order_depends_target_secC
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\secC.dir\lib\mylib.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = CMakeFiles\secC.dir
+  OBJECT_FILE_DIR = CMakeFiles\secC.dir\lib
+  TARGET_SUPPORT_DIR = CMakeFiles\secC.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target secC
@@ -65,7 +73,7 @@ build CMakeFiles/secC.dir/main.c.obj: C_COMPILER__secC_unscanned_Debug C$:/Users
 #############################################
 # Link the executable secC.exe
 
-build secC.exe: C_EXECUTABLE_LINKER__secC_Debug CMakeFiles/secC.dir/main.c.obj
+build secC.exe: C_EXECUTABLE_LINKER__secC_Debug CMakeFiles/secC.dir/main.c.obj CMakeFiles/secC.dir/lib/mylib.c.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
