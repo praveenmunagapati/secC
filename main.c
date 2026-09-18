@@ -1,13 +1,40 @@
-#include <ctype.h>
 #include <stdio.h>
-#include<math.h>
 int main(void) {
   setbuf(stdout, 0);
-  printf("%lf\n",floor(1.2));
-  printf("%lf\n",ceil(1.2));
-  printf("%lf\n",pow(2,16));
-  printf("%lf\n",sqrt(4));
-  printf("%d\n",isalpha('b'));
-  printf("%d\n",ispunct(1));
+  int k = 10;
+  printf("%d\n",k);
+  printf("%p\n",&k);
+  printf("%d\n",*(&k));
+
+  //what is pointer variable holds only address
+  int *pk;
+  pk = &k;
+
+  printf("%p\n",&pk);
+  printf("%p\n",pk);
+  printf("%p\n",&k);
+  printf("%d\n",*pk);
+  k = 15;
+  printf("%d\n",k);
+  *pk = 25;
+  printf("%d\n",k);
+  //errors
+   float f = 1.6;
+//   pk = f;
+   long l = 17875;
+//   pk = &l;
+short s = 5;
+//   pk = &s;
+  int g = 105;
+  pk = &g;
+  printf("%d\n",*pk);
+  void *gp ;
+    gp = &f;
+    printf("%f\n",*(float *)gp);
+    gp = &l;
+    printf("%d\n",*(long *)gp);
+    gp = &s;
+    printf("%d\n",*(short *)gp);
+
 
 }
