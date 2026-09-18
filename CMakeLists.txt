@@ -4,5 +4,5 @@ project(secC C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(secC main.c
-        mylib.h
-        mylib.c)
+        lib/mylib.h
+        lib/mylib.c)

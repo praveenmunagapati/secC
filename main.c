@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "mylib.h"
+#include "lib/mylib.h"
 
 int main(void) {
   setbuf(stdout, 0);
