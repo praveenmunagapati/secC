@@ -1,13 +1,13 @@
+#include <ctype.h>
 #include <stdio.h>
-#include "lib/mylib.h"
-
+#include<math.h>
 int main(void) {
   setbuf(stdout, 0);
-   int total = sids(333);
-    printf("%d\n",total);
-    isprime(17);
-    isprime(107);
-    isprime(170);
-    isprime(174);
+  printf("%lf\n",floor(1.2));
+  printf("%lf\n",ceil(1.2));
+  printf("%lf\n",pow(2,16));
+  printf("%lf\n",sqrt(4));
+  printf("%d\n",isalpha('b'));
+  printf("%d\n",ispunct(1));
 
 }
