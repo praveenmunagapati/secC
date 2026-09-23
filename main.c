@@ -1,73 +1,27 @@
 #include <stdio.h>
-
-void bubblesort(int *numbers) {
-    //bubble sort
-    for (int i = 0; i < 6; ++i) {
-        for (int j = 0; j < 6; ++j) {
-            if (numbers[i]<numbers[j]) {
-                int temp = numbers[i];
-                numbers[i] = numbers[j];
-                numbers[j] = temp;
-            }
-        }
-    }
-    return;
-}
+#include <string.h>
 int main(void) {
     setbuf(stdout, 0);
-
-    int numbers[] = {42, 17, 89, 3, 65, 23};
-    //swaping
-    int a = 10;
-    int b =20;
-    printf("\nbefore swaping\n");
-    printf("a = %d\n",a);
-    printf("b = %d\n",b);
-    int temp;
-    temp = a;
-    a = b;
-    b = temp;
-    printf("\nafter swaping\n");
-    printf("a = %d\n",a);
-    printf("b = %d\n",b);
-
-    printf("\nbefore swaping\n");
-    printf("a = %d\n",a);
-    printf("b = %d\n",b);
-     //without third varibale
-    a = (a*b)/(b=a);
-    printf("\nafter swaping\n");
-    printf("a = %d\n",a);
-    printf("b = %d\n",b);
-    printf("\nbefore sorting\n");
-    for (int i = 0; i < 6; ++i) {
-        printf("%d \t",numbers[i]);
-    }
-    //bubble sort
-    for (int i = 0; i < 6; ++i) {
-        for (int j = 0; j < 6; ++j) {
-            if (numbers[i]>numbers[j]) {
-                int temp = numbers[i];
-                numbers[i] = numbers[j];
-                numbers[j] = temp;
-            }
-        }
-    }
-    printf("\nafter sorting\n");
-    for (int i = 0; i < 6; ++i) {
-        printf("%d \t",numbers[i]);
+    char name[10] ={'s','i','n','d','h','u','r','a','\0'};//null termination
+    // for (int i = 0; i < 10; ++i) {
+    //     printf("%c",name[i]);
+    // }
+    printf("%d\n",strlen(name));
+    for (int i = 0; i < strlen(name); ++i) {
+        printf("%c",name[i]);
     }
 
-    int numbers1[] = {42, 74, 89, 3, 44, 7};
-    printf("\nbefore sorting\n");
-    for (int i = 0; i < 6; ++i) {
-        printf("%d \t",numbers[i]);
-    }
-    bubblesort(numbers1);
-    printf("\nafter sorting\n");
-    for (int i = 0; i < 6; ++i) {
-        printf("%d \t",numbers1[i]);
-    }
+    printf("\n%s\n",name);
+    puts(name);
+    strcpy(name,"raj");
+    printf("\n%s\n",name);
+
+    char *me = "rani";
+    printf("%p\n",me);
+    printf("%s\n",me);
+
+    char csmc_students[65][20];
+    printf("\n%d\n",sizeof(csmc_students));
 
 
     return 0;
