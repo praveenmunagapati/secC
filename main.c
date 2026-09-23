@@ -1,29 +1,46 @@
 #include <stdio.h>
-#include <string.h>
+enum WEEK {
+    MONDAY=-7,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY
+};
 int main(void) {
     setbuf(stdout, 0);
-    char csmc_students[3][20] = {{'r','a','j','u'},{'r','a','n','i'},{'a','b','h','i'}};
-    printf("%d\n",sizeof(csmc_students));
-    csmc_students[0][0] = 'r';
-    csmc_students[0][1] = 'a';
-    csmc_students[0][2] = 'j';
-    csmc_students[0][3] = 'u';
-    csmc_students[1][0] = 'r';
-    csmc_students[1][1] = 'a';
-    csmc_students[1][2] = 'n';
-    csmc_students[1][3] = 'i';
-    csmc_students[2][0] = 'a';
-    csmc_students[2][1] = 'b';
-    csmc_students[2][2] = 'h';
-    csmc_students[2][3] = 'i';
+    printf("%d\n",sizeof(enum WEEK));
+    printf("%d\n",sizeof(MONDAY));
+    printf("%d\n",MONDAY);
+    printf("%d\n",TUESDAY);
+    printf("%d\n",WEDNESDAY);
+    printf("%d\n",THURSDAY);
+    printf("%d\n",FRIDAY);
+    printf("%d\n",SATURDAY);
+    printf("%d\n",SUNDAY);
+    //MONDAY = 15;//CANT THEY ARE NOT VARIABLES THEY ARE KEY VALUE PAIRS
 
-    strcpy(csmc_students[0],"sindhura");
-    strcpy(csmc_students[1],"vamshi");
-    strcpy(csmc_students[2],"raj");
-
-    int csmc_students_marks[3] = {56,64,51};
-    for (int i = 0; i < 3; ++i) {
-        printf("student name %s marks %d\n",csmc_students[i],csmc_students_marks[i]);
+    //machine tea coffee boost
+    // 0 for tea 1 coffee 2 for boost
+    int choice = 4;
+    switch (choice) {
+        case 1 : printf("you get tea");break;
+        case 2 : printf("you get coffee");break;
+        case 3 : printf("you get boost");break;
+        default:printf("no choice\n");break;
+    }
+    enum  MACHINE {
+        TEA = 1,
+        COFFEE,
+        BOOST
+    };
+    choice = COFFEE;
+    switch (choice) {
+        case TEA : printf("you get tea");break;
+        case COFFEE : printf("you get coffee");break;
+        case BOOST : printf("you get boost");break;
+        default:printf("no choice");break;
     }
 
     return 0;
