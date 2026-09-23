@@ -1,4 +1,18 @@
 #include <stdio.h>
+
+void bubblesort(int *numbers) {
+    //bubble sort
+    for (int i = 0; i < 6; ++i) {
+        for (int j = 0; j < 6; ++j) {
+            if (numbers[i]<numbers[j]) {
+                int temp = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = temp;
+            }
+        }
+    }
+    return;
+}
 int main(void) {
     setbuf(stdout, 0);
 
@@ -25,11 +39,36 @@ int main(void) {
     printf("\nafter swaping\n");
     printf("a = %d\n",a);
     printf("b = %d\n",b);
-
+    printf("\nbefore sorting\n");
+    for (int i = 0; i < 6; ++i) {
+        printf("%d \t",numbers[i]);
+    }
     //bubble sort
     for (int i = 0; i < 6; ++i) {
-
+        for (int j = 0; j < 6; ++j) {
+            if (numbers[i]>numbers[j]) {
+                int temp = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = temp;
+            }
+        }
     }
+    printf("\nafter sorting\n");
+    for (int i = 0; i < 6; ++i) {
+        printf("%d \t",numbers[i]);
+    }
+
+    int numbers1[] = {42, 74, 89, 3, 44, 7};
+    printf("\nbefore sorting\n");
+    for (int i = 0; i < 6; ++i) {
+        printf("%d \t",numbers[i]);
+    }
+    bubblesort(numbers1);
+    printf("\nafter sorting\n");
+    for (int i = 0; i < 6; ++i) {
+        printf("%d \t",numbers1[i]);
+    }
+
 
     return 0;
 }
