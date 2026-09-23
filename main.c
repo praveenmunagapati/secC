@@ -2,27 +2,29 @@
 #include <string.h>
 int main(void) {
     setbuf(stdout, 0);
-    char name[10] ={'s','i','n','d','h','u','r','a','\0'};//null termination
-    // for (int i = 0; i < 10; ++i) {
-    //     printf("%c",name[i]);
-    // }
-    printf("%d\n",strlen(name));
-    for (int i = 0; i < strlen(name); ++i) {
-        printf("%c",name[i]);
+    char csmc_students[3][20] = {{'r','a','j','u'},{'r','a','n','i'},{'a','b','h','i'}};
+    printf("%d\n",sizeof(csmc_students));
+    csmc_students[0][0] = 'r';
+    csmc_students[0][1] = 'a';
+    csmc_students[0][2] = 'j';
+    csmc_students[0][3] = 'u';
+    csmc_students[1][0] = 'r';
+    csmc_students[1][1] = 'a';
+    csmc_students[1][2] = 'n';
+    csmc_students[1][3] = 'i';
+    csmc_students[2][0] = 'a';
+    csmc_students[2][1] = 'b';
+    csmc_students[2][2] = 'h';
+    csmc_students[2][3] = 'i';
+
+    strcpy(csmc_students[0],"sindhura");
+    strcpy(csmc_students[1],"vamshi");
+    strcpy(csmc_students[2],"raj");
+
+    int csmc_students_marks[3] = {56,64,51};
+    for (int i = 0; i < 3; ++i) {
+        printf("student name %s marks %d\n",csmc_students[i],csmc_students_marks[i]);
     }
-
-    printf("\n%s\n",name);
-    puts(name);
-    strcpy(name,"raj");
-    printf("\n%s\n",name);
-
-    char *me = "rani";
-    printf("%p\n",me);
-    printf("%s\n",me);
-
-    char csmc_students[65][20];
-    printf("\n%d\n",sizeof(csmc_students));
-
 
     return 0;
 }
