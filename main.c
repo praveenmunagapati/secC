@@ -16,9 +16,18 @@ int main(void) {
     printf("\nafter swaping\n");
     printf("a = %d\n",a);
     printf("b = %d\n",b);
-    
+
+    printf("\nbefore swaping\n");
+    printf("a = %d\n",a);
+    printf("b = %d\n",b);
+     //without third varibale
+    a = (a*b)/(b=a);
+    printf("\nafter swaping\n");
+    printf("a = %d\n",a);
+    printf("b = %d\n",b);
+
     //bubble sort
-    for (int i = 0; i < UPPER_BOUND; ++i) {
+    for (int i = 0; i < 6; ++i) {
 
     }
 
