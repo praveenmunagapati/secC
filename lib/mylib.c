@@ -27,3 +27,6 @@ void isprime(int num) {
     }
     return;
 }
+void teststatic(void) {
+    printf("%d\n",i);
+}
