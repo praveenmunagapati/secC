@@ -1,16 +1,32 @@
 #include <stdint.h>
 #include <stdio.h>
-
+static int i = 0;
+int foo() {
+    static int i = 0;
+    ++i;
+    return i;
+}
 int main(void) {
     setbuf(stdout, 0);
+    //scope and lifetime
+    //storage classes
+     auto signed int i = 10;
+     printf("%d\n",i);
+     {
+         auto signed int j = 5;
+         printf("%d\n",j);
+     }
+   // printf("%d\n",j);
+    printf("%d\n",foo());
+    printf("%d\n",foo());
+    printf("%d\n",foo());
 
-    //revision
-    //controls
-    //loops
-    //jump statements
-    //printf("%d\n",5.0%2);//invalid
-    printf("%d\n",-5%2);
-    printf("%d\n",5%-2);
+      {
+         static signed int j = 5;//local
+         printf("%d\n",j);
+     }
+     //printf("%d\n",j);//still cant access
+    printf("%d\n",i);
 
     return 0;
 }
