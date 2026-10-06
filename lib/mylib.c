@@ -31,7 +31,7 @@ void isprime(int num) {
 //     printf("%d\n",i);
 // }
 
-void testexterne(void) {
-    extern int i;
-    printf("%d\n",i);
-}
+// void testexterne(void) {
+//     extern int i;
+//     printf("%d\n",i);
+// }
