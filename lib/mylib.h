@@ -6,5 +6,6 @@
 #define SECC_MYLIB_H
 unsigned int sids(unsigned int num);
 void isprime(int num);
-void teststatic(void);
+void testextern(void);
+void testexterne(void);
 #endif //SECC_MYLIB_H

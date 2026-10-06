@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "lib/mylib.h"
-static int i = 55;//global variable
+int i = 55;//global variable
 int foo() {
     ++i;
     return i;
@@ -15,5 +15,6 @@ int main(void) {
     printf("%d\n",foo());
     printf("%d\n",i);
     //teststatic();//cant access  i
+    testexterne();
     return 0;
 }
