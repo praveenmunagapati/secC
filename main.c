@@ -13,21 +13,50 @@ int main() {
     // 20
 
     int array[5] = {12 ,5, 8, 25, 15};
-    int big = array[0];
-    int littlebig = array[1];
     for (int i = 0; i < 5; ++i) {
-        if ( big < array[i]) {
-            littlebig  = big;
-            big = array[i];
-        }else if (littlebig!=big && littlebig<array[i] ){
-            littlebig  = array[i];
-        }
-
+        printf("%d\t",array[i]);
     }
-    printf("%d\n",littlebig);
+int carray[sizeof(array)/sizeof(array[0])];
 
+    for (int i = 0; i < 5; ++i) {
+        carray[sizeof(array)/sizeof(array[0])-i-1] = array[i];
+    }
+    printf("\n");
+    for (int i = 0; i < 5; ++i) {
+        printf("%d\t",carray[i]);
+    }
+    printf("\n");
+    //
+    // int *high;
+    // int *low;
+    //
+    // high = &array[4];
+    // low = &array[0];
+    // printf("%p\n",high);
+    // printf("%p\n",low);
+    // while (low<high) {
+    //     *high = (*low  *  *high)/ (*low = *high);
+    //     low++;
+    //     high--;
+    // }
+    // for (int i = 0; i < 5; ++i) {
+    //     printf("%d\t",array[i]);
+    // }
+    char name[6] = {'h' ,'e', 'l', 'l', 'o','\0'};
+    printf("%s\n",name);
+    char *high;
+    char *low;
 
-
+    high = &name[4];
+    low = &name[0];
+    printf("%p\n",high);
+    printf("%p\n",low);
+    while (low<high) {
+        *high = (*low  *  *high)/ (*low = *high);
+        low++;
+        high--;
+    }
+    printf("%s\n",name);
 
     return 0;
 }
