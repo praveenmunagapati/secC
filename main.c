@@ -1,62 +1,63 @@
 #include <stdio.h>
+#include<string.h>
+
+
+size_t __cdecl mystrlen(const char *_Str) {
+    const char *s = _Str;
+
+    // Increment the pointer until the null terminator ('\0') is reached
+    while (*s) {
+        s++;
+    }
+    // Return the difference between the end pointer and the start pointer
+    return (size_t)(s - _Str);
+}
 int main() {
     setbuf(stdout,0);
-    // 2. Medium
-    // Write a C program to find the second-largest element in an array
-    // without sorting the array.
-    // use cases
-    // 2
-    // 10 20 30 40 50
-    // 40
-    // 1
-    // 12 5 8 25 15 20
-    // 20
 
-    int array[5] = {12 ,5, 8, 25, 15};
-    for (int i = 0; i < 5; ++i) {
-        printf("%d\t",array[i]);
-    }
-int carray[sizeof(array)/sizeof(array[0])];
+    char csmc_students[3][20] = {{'r','a','j','u'},{'r','a','n','i'},{'a','b','h','i'}};
+    printf("%d\n",sizeof(csmc_students));
+    csmc_students[0][0] = 'r';
+    csmc_students[0][1] = 'a';
+    csmc_students[0][2] = 'j';
+    csmc_students[0][3] = 'u';
+    csmc_students[1][0] = 'r';
+    csmc_students[1][1] = 'a';
+    csmc_students[1][2] = 'n';
+    csmc_students[1][3] = 'i';
+    csmc_students[2][0] = 'a';
+    csmc_students[2][1] = 'b';
+    csmc_students[2][2] = 'h';
+    csmc_students[2][3] = 'i';
 
-    for (int i = 0; i < 5; ++i) {
-        carray[sizeof(array)/sizeof(array[0])-i-1] = array[i];
-    }
-    printf("\n");
-    for (int i = 0; i < 5; ++i) {
-        printf("%d\t",carray[i]);
-    }
-    printf("\n");
-    //
-    // int *high;
-    // int *low;
-    //
-    // high = &array[4];
-    // low = &array[0];
-    // printf("%p\n",high);
-    // printf("%p\n",low);
-    // while (low<high) {
-    //     *high = (*low  *  *high)/ (*low = *high);
-    //     low++;
-    //     high--;
-    // }
-    // for (int i = 0; i < 5; ++i) {
-    //     printf("%d\t",array[i]);
-    // }
-    char name[6] = {'h' ,'e', 'l', 'l', 'o','\0'};
-    printf("%s\n",name);
-    char *high;
-    char *low;
+    strcpy(csmc_students[0],"sindhura");
+    strcpy(csmc_students[1],"vamshi");
+    strcpy(csmc_students[2],"raj");
 
-    high = &name[4];
-    low = &name[0];
-    printf("%p\n",high);
-    printf("%p\n",low);
-    while (low<high) {
-        *high = (*low  *  *high)/ (*low = *high);
-        low++;
-        high--;
-    }
-    printf("%s\n",name);
+    char *me = "raj";
+    printf("%s\n",me);
+    printf("%c\n",*me);
+    printf("%d\n",sizeof(*me));
+    printf("%p\n",me);
+    printf("%d\n",sizeof(me));
+    printf("%d\n",mystrlen(me)*sizeof(char));
+    printf("%c\n",me[1]);
+    // me[1] = 'A';//cant change
+    // printf("%c\n",me[1]);
+
+    char *names[3] = {"nishika","ram","sita"};
+    printf("%s\n",names[0]);
+    printf("%s\n",names[1]);
+    printf("%s\n",names[2]);
+    char myname[10];
+    strcpy(myname,"ruchika");
+    printf("%s\n",myname);
+    strrev(myname);
+    printf("%s\n",myname);
+    strcpy(myname,"ruchika");
+    printf("%c\n",strchr(myname,'i'));
+    printf("%s\n",strstr("String Library Functions","Library"));
+    printf("%d\n",strcmp("hi","hj"));
 
     return 0;
 }
