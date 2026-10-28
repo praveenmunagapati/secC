@@ -1,58 +1,29 @@
 #include <stdio.h>
-/*d) A Fibonacci sequence is defined as follows: the first and second terms in the sequence are 0
-and 1. Subsequent terms are found by adding the preceding two terms in the sequence. Write
-a C program to generate the first n terms of the sequence*/
- void facinaccii(int limit) {
-     int a = 0;
-     int b = 1;
-     int sum;
-     printf("%d\t",a);
-     while (sum<limit) {
-         a = b;
-         b = sum;
-         sum = a+b;
-         printf("%d\t",sum);
-     }
-     return;
- }
-
+/* a) Write a C program to find the minimum, maximum and average in an array of integers.   */
 int main() {
     setbuf(stdout,0);
-    int a = 0;
-    int b = 1;
-    printf("%d\t",a);
-    printf("%d\t",b);
-    int sum = a+b;
-    printf("%d\t",sum);
-    a = b;
-    b = sum;
-    sum = a+b;
-    printf("%d\t",sum);
-    a = b;
-    b = sum;
-    sum = a+b;
-    printf("%d\t",sum);
-    a = b;
-    b = sum;
-    sum = a+b;
-    printf("%d\t",sum);
-    a = b;
-    b = sum;
-    sum = a+b;
-    printf("%d\t",sum);
-    a = b;
-    b = sum;
-    sum = a+b;
-    printf("%d\t",sum);
-    while (sum<10000) {
-        a = b;
-        b = sum;
-        sum = a+b;
-        printf("%d\t",sum);
+    int array[10] = {7,5,9,12,47,5,11,20,44,32};
+    int minimum = array[0];
+    for (int i = 0; i < 10; ++i) {
+        if (minimum>array[i]) {
+            minimum = array[i];
+        }
     }
-    printf("\n");
-     facinaccii(1000000);
+    int maximum = array[0];
+    for (int i = 0; i < 10; ++i) {
+        if (maximum<array[i]) {
+            maximum = array[i];
+        }
+    }
 
+    int sum = 0;
+    for (int i = 0; i < 10; ++i) {
+            sum+= array[i];
+    }
+    float avg = (float)sum/10;//no of elements in array
+    printf("%d\n",minimum);
+    printf("%d\n",maximum);
+    printf("%f\n",avg);
 
     return 0;
 }
