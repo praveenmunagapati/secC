@@ -1,35 +1,59 @@
 #include <stdio.h>
-#include <string.h>
-int stringlen(char *string) {
-    char *dstring = string;
-    while (*dstring) {
-        dstring++;
-    }
-    return dstring - string;
-}
-int stringlenr(char *string) {
-    // if (*string == 0) {
-    //     return  0;
-    // }
-    // return 1 + stringlenr(string+1);
-    return *string ? 1 + stringlenr(string+1):0;
-}
+/*d) A Fibonacci sequence is defined as follows: the first and second terms in the sequence are 0
+and 1. Subsequent terms are found by adding the preceding two terms in the sequence. Write
+a C program to generate the first n terms of the sequence*/
+ void facinaccii(int limit) {
+     int a = 0;
+     int b = 1;
+     int sum;
+     printf("%d\t",a);
+     while (sum<limit) {
+         a = b;
+         b = sum;
+         sum = a+b;
+         printf("%d\t",sum);
+     }
+     return;
+ }
+
 int main() {
     setbuf(stdout,0);
-    char *name = "karthika";
-    printf("%c\n",*name);
-    printf("%s\n",name);
-    printf("%p\n",name);
-    int i = 0;
-    char *dstring = name;
-    while (*dstring) {
-        dstring++;
-        i++;
+    int a = 0;
+    int b = 1;
+    printf("%d\t",a);
+    printf("%d\t",b);
+    int sum = a+b;
+    printf("%d\t",sum);
+    a = b;
+    b = sum;
+    sum = a+b;
+    printf("%d\t",sum);
+    a = b;
+    b = sum;
+    sum = a+b;
+    printf("%d\t",sum);
+    a = b;
+    b = sum;
+    sum = a+b;
+    printf("%d\t",sum);
+    a = b;
+    b = sum;
+    sum = a+b;
+    printf("%d\t",sum);
+    a = b;
+    b = sum;
+    sum = a+b;
+    printf("%d\t",sum);
+    while (sum<10000) {
+        a = b;
+        b = sum;
+        sum = a+b;
+        printf("%d\t",sum);
     }
-    printf("%d\n",i);
-    printf("%d\n",strlen(name));
-   printf("%d\n",stringlen(name));
-   printf("%d\n",stringlenr(name));
+    printf("\n");
+     facinaccii(1000000);
+
+
     return 0;
 }
 
