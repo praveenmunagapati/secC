@@ -1,54 +1,47 @@
 #include <stdio.h>
-void foo(void) {//cant terminate
-    printf("foo");
-    foo();
-}
-void foo1(int i) {//cant terminate
-    printf("%d\n",i);
-    foo1(i+1);
-}
-void foo2(int i) {//can be terminated with return condition
-    if (i == 11) {
-        return;
+int arraysum(int *parray) {
+    int sum = 0;
+    for (int i = 0; i < 5; ++i) {
+        sum+=parray[i];
     }
-    printf("%d\n",i);
-    foo2(i+1);
+    return sum;
 }
-int factorial(int num) {
-    if (num == 0) {
-        return 1;
+//not flexble
+int arraysumr(int *parray) {
+    if (*parray == 9) {
+        return 9;
     }
-    return num * factorial(num - 1);
+    return *parray + arraysumr(parray+1);
 }
-int sumofnatuaral(int num) {
-    if (num == 1) {
-        return 1;
+//flexible works with any array
+int arraysumrf(int *parray,int lenght) {
+    if (lenght == 1) {
+        return *parray;
     }
-    return num + sumofnatuaral(num - 1);
+    return *parray + arraysumrf(parray+1,lenght - 1);
 }
 
 int main() {
     setbuf(stdout,0);
-    //foo();
-    //foo1(1);
-    //foo2(1);
-    int num   = 5;
-    int result = 1;
-    for (int i = num; i > 0; --i) {
-        result*=i;
+    int array[5] = { 5,6,8,7,9};
+    int sum = 0;
+    for (int i = 0; i < 5; ++i) {
+        sum+=array[i];
     }
-    printf("%d\n",result);
-    printf("%d\n",factorial(5));
-    num   = 100;
-    result = 0;
-    for (int i = num; i > 0; --i) {
-        result+=i;
-    }
-    printf("%d\n",result);
-
-    printf("%d\n",sumofnatuaral(100));
-
-
+    printf("%d\n",sum);
+    printf("%p\n",array);
+    printf("%p\n",array+1);
+    printf("%p\n",array+2);
+    printf("%p\n",array+3);
+    printf("%p\n",array+4);
+    printf("%d\n",*array);
+    printf("%d\n",*(array+1));
+    printf("%d\n",*(array+2));
+    printf("%d\n",*(array+3));
+    printf("%d\n",*(array+4));
+    printf("%d\n",arraysum(array));
+    printf("%d\n",arraysumr(array));
+    printf("%d\n",arraysumrf(array,sizeof(array)/sizeof(int)));
 
 
     return 0;
