@@ -1,55 +1,35 @@
 #include <stdio.h>
-void linearsearch(int *parray,int key) {
-    for (int i = 0; i < 5; ++i) {
-        if (key==parray[i]) {
-            printf("key found at index %d\n",i);
-            break;
-        }
+#include <string.h>
+int stringlen(char *string) {
+    char *dstring = string;
+    while (*dstring) {
+        dstring++;
     }
-    return;
+    return dstring - string;
 }
-void linearsearchr(int *parray,int key) {
-    // for (int i = 0; i < 5; ++i) {
-    //     if (key==parray[i]) {
-    //         printf("keyfound at index %d\n",i);
-    //         break;
-    //     }
+int stringlenr(char *string) {
+    // if (*string == 0) {
+    //     return  0;
     // }
-    if (key==*parray) {
-        printf("key found at address %p\n",parray);
-        return;
-    }
-    linearsearchr(parray+1,key);
-    return;
-}
-
-int linearsearchrr(int *parray,int key) {
-    if (key==*parray) {
-        printf("key found at address %p\n",parray);
-        return 1;
-    }
-
-    return linearsearchrr(parray+1,key);
+    // return 1 + stringlenr(string+1);
+    return *string ? 1 + stringlenr(string+1):0;
 }
 int main() {
     setbuf(stdout,0);
-    int array[5] = { 5,6,8,7,9};
-    int key = 7;
-    for (int i = 0; i < 5; ++i) {
-        if (key==array[i]) {
-            printf("key found at index %d\n",i);
-            break;
-        }
+    char *name = "karthika";
+    printf("%c\n",*name);
+    printf("%s\n",name);
+    printf("%p\n",name);
+    int i = 0;
+    char *dstring = name;
+    while (*dstring) {
+        dstring++;
+        i++;
     }
-
-    linearsearch(array,key);
-    linearsearchr(array,key);
-    if (linearsearchrr(array,key)) {
-        printf("key found \n");
-    }else {
-        printf("key not found \n");
-
-    }
+    printf("%d\n",i);
+    printf("%d\n",strlen(name));
+   printf("%d\n",stringlen(name));
+   printf("%d\n",stringlenr(name));
     return 0;
 }
 
