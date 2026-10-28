@@ -1,30 +1,24 @@
 #include <stdio.h>
-/* a) Write a C program to find the minimum, maximum and average in an array of integers.   */
-int main() {
-    setbuf(stdout,0);
-    int array[10] = {7,5,9,12,47,5,11,20,44,32};
-    int minimum = array[0];
-    for (int i = 0; i < 10; ++i) {
-        if (minimum>array[i]) {
-            minimum = array[i];
-        }
-    }
-    int maximum = array[0];
-    for (int i = 0; i < 10; ++i) {
-        if (maximum<array[i]) {
-            maximum = array[i];
+//matrix multiplication
+int main(void) {
+    setbuf(stdout, 0);
+    //multidimentional array
+
+    int array2d[2][2] = {{3,4},{5,6}};
+    int another2d[2][2] = {{4,9},{11,6}};
+    int result2d[2][2];
+    for (int i = 0; i < 2; ++i) {
+        for (int j = 0; j < 2; ++j) {
+            result2d[i][j] = array2d[i][j] + another2d[i][j];
         }
     }
 
-    int sum = 0;
-    for (int i = 0; i < 10; ++i) {
-            sum+= array[i];
+    printf("result matrix \n");
+    for (int i = 0; i < 2; ++i) {
+        for (int j = 0; j < 2; ++j) {
+            printf("%d\t",result2d[i][j]);
+        }
+        printf("\n");
     }
-    float avg = (float)sum/10;//no of elements in array
-    printf("%d\n",minimum);
-    printf("%d\n",maximum);
-    printf("%f\n",avg);
-
     return 0;
 }
-
